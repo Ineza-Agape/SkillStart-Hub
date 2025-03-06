@@ -4,6 +4,11 @@ body {
     color: #333;
     margin: 0;
     padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 header {
@@ -39,10 +44,29 @@ footer {
     justify-content: center;
     align-items: center;
     color: white;
-    padding-top: 20%;
 }
 
 .hero-image p {
     font-size: 24px;
     font-weight: bold;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 0;
+    animation: typing 4s steps(40) 1s forwards, blink 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
 }

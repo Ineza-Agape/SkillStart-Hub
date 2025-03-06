@@ -32,7 +32,7 @@ footer {
 
 .hero-image {
     width: 100%;
-    height: 100vh; /* Keep it full-screen */
+    height: 100vh; /* Full viewport height */
     background-image: url('images/mentoring.jpg'); /* Your image path */
     background-size: cover;
     background-position: center;
@@ -42,7 +42,7 @@ footer {
     align-items: center;
     color: white;
     position: relative;
-    z-index: -1; /* Keep it below content */
+    z-index: 1; /* Keep it above content */
 }
 
 /* Hero Text */
@@ -74,12 +74,14 @@ footer {
 
 /* Content Section */
 .home-content {
-    padding: 3rem; /* Add more padding to create space below the image */
-    background-color: #fff; /* White background */
+    background-color: #dfbcb0; /* Light brown background */
+    color: #333;
+    padding: 3rem;
     width: 100%;
     text-align: center;
-    margin-top: -50px; /* Push the content slightly up to overlap the bottom of the hero image */
-    z-index: 1; /* Make sure it's above the hero image */
+    margin-top: 0; /* No margin top to directly follow the hero image */
+    z-index: 0; /* Ensure it's below the hero image */
+    position: relative;
 }
 
 /* Other styles */

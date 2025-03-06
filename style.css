@@ -46,6 +46,7 @@ footer {
     justify-content: center;
     align-items: center;
     color: white;
+    position: relative;
 }
 
 .hero-image p {
@@ -73,28 +74,30 @@ footer {
         border-color: transparent;
     }
 }
+
 #loginSection {
     height: 100vh;
+    width: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start; 
     background-color: rgba(73, 45, 35, 0.8);
     opacity: 0;
-    transform: translateY(50px);
-    transition: opacity 1s ease, transform 1s ease;
+    position: fixed;
+    top: 100%;
+    left: 0;
+    transition: opacity 1s ease, top 1s ease;
 }
-
 
 #loginSection.show {
     opacity: 1;
-    transform: translateY(0);
+    top: 0;
 }
 
 .hero-text.fade-out {
     opacity: 0;
     transition: opacity 0.5s ease;
 }
-
 
 .login-box {
     background: rgba(255, 255, 255, 0.2);

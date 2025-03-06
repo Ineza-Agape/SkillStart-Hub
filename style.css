@@ -67,3 +67,34 @@ footer {
     text-align: center;
     padding: 10px;
 }
+/* Basic styling for the page */
+.content {
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+h2 {
+    color: #492d23;
+}
+
+.pdfs, .courses {
+    margin-top: 20px;
+}
+
+.pdfs ul, .courses ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.pdfs li, .courses li {
+    margin: 10px 0;
+}
+
+a {
+    color: #492d23;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}

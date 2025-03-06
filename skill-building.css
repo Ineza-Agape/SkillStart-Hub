@@ -1,32 +1,36 @@
 body {
-    background-image: url('learning.jpeg'); /* Replace with your actual image path */
+    background-image: url('images/learning.jpeg'); /* Update the path if needed */
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    color: white; /* Ensure text is visible */
-    text-align: center;
-    padding: 0;
+    height: 100vh;
     margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white; /* Ensure text is readable */
+    text-align: center;
 }
 
 /* Style the heading */
 h1 {
-    font-size: 36px;
+    font-size: 42px;
     font-weight: bold;
-    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5); /* Adds shadow to highlight text */
-    margin-top: 50px;
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.6); /* Stronger shadow for better visibility */
+    margin-bottom: 20px;
 }
 
-/* Style the content box */
+/* Content container */
 .content {
-    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+    background-color: rgba(0, 0, 0, 0.6); /* Dark semi-transparent background */
     padding: 20px;
     border-radius: 10px;
-    display: inline-block;
-    margin-top: 20px;
+    width: 50%;
+    max-width: 600px;
 }
 
-/* Style links */
+/* Style the PDF links */
 ul {
     list-style: none;
     padding: 0;
@@ -37,7 +41,7 @@ li {
 }
 
 a {
-    color: #ffcc99; /* Light orange for visibility */
+    color: #ffcc99; /* Light orange for better contrast */
     font-size: 18px;
     text-decoration: none;
     font-weight: bold;

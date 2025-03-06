@@ -73,21 +73,28 @@ footer {
         border-color: transparent;
     }
 }
-.login-section {
-    height: 100vh; 
+#loginSection {
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(73, 45, 35, 0.8); /* Brown background with transparency */
-    opacity: 0; 
+    background-color: rgba(73, 45, 35, 0.8);
+    opacity: 0;
     transform: translateY(50px);
     transition: opacity 1s ease, transform 1s ease;
 }
 
-.login-section.show {
+
+#loginSection.show {
     opacity: 1;
     transform: translateY(0);
 }
+
+.hero-text.fade-out {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
 
 .login-box {
     background: rgba(255, 255, 255, 0.2);

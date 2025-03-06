@@ -84,7 +84,7 @@ footer {
     background-color: rgba(73, 45, 35, 0.8); /* Brown background with transparency */
     opacity: 0; /* Initially hidden */
     position: fixed;
-    top: 100%; /* Initially, position it outside of the screen */
+    top: 0; /* Initially, position it outside of the screen */
     left: 0;
     transition: opacity 1s ease, top 1s ease; /* Smooth transition */
 }

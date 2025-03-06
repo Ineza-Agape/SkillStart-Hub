@@ -80,20 +80,22 @@ footer {
     width: 100%;
     display: flex;
     justify-content: center;
-    align-items: flex-start; 
-    background-color: rgba(73, 45, 35, 0.8);
-    opacity: 0;
+    align-items: center; /* Centering the login box */
+    background-color: rgba(73, 45, 35, 0.8); /* Brown background with transparency */
+    opacity: 0; /* Initially hidden */
     position: fixed;
-    top: 100%;
+    top: 100%; /* Initially, position it outside of the screen */
     left: 0;
-    transition: opacity 1s ease, top 1s ease;
+    transition: opacity 1s ease, top 1s ease; /* Smooth transition */
 }
 
+/* When the login section comes into view */
 #loginSection.show {
     opacity: 1;
-    top: 0;
+    top: 0; /* Slide up into the screen */
 }
 
+/* Hero Text Fade Out */
 .hero-text.fade-out {
     opacity: 0;
     transition: opacity 0.5s ease;

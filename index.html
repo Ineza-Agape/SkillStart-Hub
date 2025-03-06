@@ -28,6 +28,24 @@
                 <button type="submit">Login</button>
             </form>
             <a href="#">Forgot Password?</a>
+            <div class="signup-prompt">
+                <span>First time here? <a href="javascript:void(0);" onclick="showSignUp()">Sign Up</a></span>
+            </div>
+        </div>
+    </div>
+    <div id="signupSection" class="signup-section hidden">
+        <div class="overlay"></div>
+        <div class="signup-box">
+            <h2>Sign Up</h2>
+            <form id="signupForm">
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit">Sign Up</button>
+            </form>
+            <div class="login-prompt">
+                <span>Already have an account? <a href="javascript:void(0);" onclick="showLogin()">Log In</a></span>
+            </div>
         </div>
     </div>
 

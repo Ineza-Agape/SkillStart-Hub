@@ -1,3 +1,11 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Style */
 body {
     font-family: 'Georgia', 'Times New Roman', serif;
     background-color: #f4f4f4;
@@ -7,12 +15,13 @@ body {
     height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
 }
 
+/* Header Style */
 header {
-    background-color: #492d23;
+    background-color: #492d23; /* Primary brown color */
     color: white;
     text-align: center;
     padding: 20px;
@@ -20,8 +29,9 @@ header {
     box-sizing: border-box;
 }
 
+/* Footer Style */
 footer {
-    background-color: #492d23;
+    background-color: #492d23; /* Primary brown color */
     color: white;
     text-align: center;
     padding: 10px;
@@ -30,10 +40,11 @@ footer {
     width: 100%;
 }
 
+/* Hero Section */
 .hero-image {
     width: 100%;
     height: 100vh;
-    background-image: url('images/mentoring.jpg');
+    background-image: url('images/mentoring.jpg'); /* Your image path */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -44,6 +55,7 @@ footer {
     position: relative;
 }
 
+/* Hero Text */
 .hero-image p {
     font-size: 36px;
     font-weight: bold;
@@ -70,6 +82,44 @@ footer {
     }
 }
 
+/* Home Page Content */
+.home-content {
+    padding: 2rem;
+    background-color: #f9f1e1; /* Light beige background for content */
+    width: 100%;
+    text-align: center;
+}
+
+.intro, .features, .call-to-action {
+    margin-bottom: 3rem;
+}
+
+h2, h3 {
+    font-size: 2rem;
+    color: #492d23; /* Matching the brown theme */
+}
+
+p {
+    font-size: 1rem;
+    color: #6b4f3b; /* Lighter brown color for text */
+    line-height: 1.6;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #6b4f3b; /* Medium brown color for buttons */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #3b221c; /* Darker brown for hover */
+}
+
 /* Login Section - Initially hidden */
 #loginSection {
     position: fixed;
@@ -86,6 +136,7 @@ footer {
     z-index: 100;
 }
 
+/* Overlay for Login */
 .overlay {
     position: absolute;
     top: 0;
@@ -93,7 +144,7 @@ footer {
     width: 100%;
     height: 100%;
     background-color: rgba(73, 45, 35, 0.8); /* Brown transparent background */
-    z-index: -1; /* Behind the login box */
+    z-index: -1;
 }
 
 /* Login Box */
@@ -109,7 +160,7 @@ footer {
 .login-box h2 {
     margin-bottom: 10px;
     font-size: 24px;
-    color: #333;
+    color: #492d23; /* Dark brown for headings */
 }
 
 .login-box input {
@@ -124,7 +175,7 @@ footer {
 .login-box button {
     width: 100%;
     padding: 10px;
-    background-color: #492d23;
+    background-color: #6b4f3b; /* Medium brown for button */
     color: white;
     border: none;
     border-radius: 5px;
@@ -134,16 +185,46 @@ footer {
 }
 
 .login-box button:hover {
-    background-color: #3b221c;
+    background-color: #3b221c; /* Darker brown for hover effect */
 }
 
 .login-box a {
     display: block;
     margin-top: 10px;
-    color: #333;
+    color: #492d23; /* Dark brown for links */
     text-decoration: none;
 }
 
 .login-box a:hover {
     text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .home-content {
+        padding: 1rem;
+    }
+
+    .hero-image p {
+        font-size: 24px;
+    }
+
+    .intro h2, .features h3 {
+        font-size: 1.5rem;
+    }
+
+    button {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-image p {
+        font-size: 20px;
+    }
+
+    .login-box {
+        width: 80%;
+    }
 }

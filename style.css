@@ -147,3 +147,33 @@ footer {
 .login-box a:hover {
     text-decoration: underline;
 }
+.hidden {
+    display: none;
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.login-container form {
+    width: 300px;
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.login-container a {
+    display: block;
+    margin-top: 10px;
+}
+
+.signup-prompt, .login-prompt {
+    margin-top: 10px;
+    font-size: 14px;
+}

@@ -82,9 +82,24 @@ footer {
     margin-top: 0; /* No margin top to directly follow the hero image */
     z-index: 0; /* Ensure it's below the hero image */
     position: relative;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
 }
 
-/* Other styles */
+body.scrolled .home-content {
+    opacity: 1;
+}
+
+.features ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.features li {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
 .intro, .features, .call-to-action {
     margin-bottom: 3rem;
 }

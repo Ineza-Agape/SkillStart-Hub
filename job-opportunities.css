@@ -1,0 +1,102 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: url('images/job-bg.jpg') no-repeat center center/cover;
+    color: white;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+header a {
+    text-decoration: none;
+    color: #f8b400;
+    font-size: 18px;
+}
+
+h1 {
+    margin: 10px 0;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.hero h2 {
+    font-size: 28px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* Job & Internship Sections */
+.jobs, .internships {
+    text-align: center;
+    padding: 40px 20px;
+    background: rgba(0, 0, 0, 0.5);
+    margin: 20px;
+    border-radius: 10px;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Card Layout */
+.job-container, .internship-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Job & Internship Cards */
+.job-card, .internship-card {
+    background: rgba(255, 255, 255, 0.9);
+    color: black;
+    padding: 20px;
+    border-radius: 8px;
+    width: 280px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-align: left;
+}
+
+.job-card h3, .internship-card h3 {
+    margin-top: 0;
+}
+
+.job-card p, .internship-card p {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.job-card a, .internship-card a {
+    display: block;
+    margin-top: 10px;
+    text-align: center;
+    padding: 8px;
+    background: #f8b400;
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.job-card a:hover, .internship-card a:hover {
+    background: #d69400;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    margin-top: 20px;
+}

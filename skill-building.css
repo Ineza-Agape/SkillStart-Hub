@@ -1,5 +1,5 @@
 body {
-    background-image: url('images/learning.jpeg'); /* Update the path if needed */
+    background-image: url('images/learning.jpeg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -7,17 +7,17 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start; /* Adjusted for better positioning */
+    justify-content: flex-start;
     height: 100vh;
-    color: white; /* Ensure text is readable */
+    color: white;
     font-family: Arial, sans-serif;
 }
 
-/* Hero Section */
+
 .hero {
     text-align: center;
     padding: 50px 0;
-    background-color: rgba(0, 0, 0, 0.5); /* Slightly transparent background for hero */
+    background-color: rgba(0, 0, 0, 0.5);
     width: 100%;
     color: white;
 }
@@ -29,15 +29,15 @@ body {
     text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
 }
 
-/* Heading */
+
 h1 {
     font-size: 42px;
     font-weight: bold;
-    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.6); /* Stronger shadow for better visibility */
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.6);
     margin-bottom: 20px;
 }
 
-/* Section Titles */
+
 h2 {
     font-size: 32px;
     font-weight: bold;
@@ -46,7 +46,7 @@ h2 {
     margin-bottom: 20px;
 }
 
-/* Card container styles */
+
 .card-container {
     display: flex;
     justify-content: space-around;
@@ -58,7 +58,7 @@ h2 {
     margin: 0 auto;
 }
 
-/* Individual card styling */
+
 .card {
     background-color: rgba(0, 0, 0, 0.7);
     color: white;
@@ -71,7 +71,7 @@ h2 {
 }
 
 .card:hover {
-    transform: translateY(-10px); /* Slight hover effect for better UX */
+    transform: translateY(-10px);
 }
 
 .card h3 {
@@ -107,13 +107,13 @@ footer {
     text-align: center;
     padding: 15px 0;
     width: 100%;
-    position: relative; /* Changed from fixed to relative */
+    position: relative;
     bottom: 0;
-    margin-top: 20px; /* Added margin-top for space */
+    margin-top: 20px;
 }
 
 .content {
-    padding-bottom: 100px; /* Adds extra padding to the bottom to avoid footer overlap */
+    padding-bottom: 100px;
 }
 
 .card {

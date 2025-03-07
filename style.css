@@ -9,10 +9,10 @@ body {
     height: 100%;
 }
 
-/* Hero section styling */
+
 .hero-image {
     width: 100%;
-    height: 100vh; /* Full height of the screen */
+    height: 100vh;
     background-image: url('images/mentoring.jpg');
     background-size: cover;
     background-position: center;
@@ -26,7 +26,7 @@ body {
 
 .hero-content {
     text-align: center;
-    background-color: rgba(73, 45, 35, 0.7); /* Opaque brown background */
+    background-color: rgba(73, 45, 35, 0.7);
     padding: 20px;
     border-radius: 10px;
 }
@@ -37,9 +37,9 @@ body {
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
-/* Home content (Card Layout) */
+
 .home-content {
-    background-color: #dfbcb0; /* Light brown background for the content */
+    background-color: #dfbcb0;
     padding: 40px 20px;
     flex: 1;
 }
@@ -75,7 +75,7 @@ body {
     text-decoration: underline;
 }
 
-/* Login Section */
+
 .login-section {
     padding: 40px 20px;
     display: flex;
@@ -110,7 +110,7 @@ body {
     background-color: #735038;
 }
 
-/* Footer styling */
+
 footer {
     background-color: #492d23;
     color: white;
@@ -119,7 +119,7 @@ footer {
     width: 100%;
 }
 
-/* Link styling */
+
 a {
     color: #492d23;
     text-decoration: none;

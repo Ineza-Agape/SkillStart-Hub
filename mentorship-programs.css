@@ -1,4 +1,3 @@
-/* General Styles */
 body {
     margin: 0;
     padding: 0;
@@ -7,7 +6,7 @@ body {
     color: white;
 }
 
-/* Header */
+
 header {
     text-align: center;
     padding: 20px;
@@ -24,7 +23,7 @@ h1 {
     margin: 10px 0;
 }
 
-/* Hero Section */
+
 .hero {
     text-align: center;
     padding: 50px 20px;
@@ -36,7 +35,7 @@ h1 {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
-/* Mentorship Section */
+
 .mentorship {
     text-align: center;
     padding: 40px 20px;
@@ -50,7 +49,7 @@ h2 {
     margin-bottom: 20px;
 }
 
-/* Cards Layout */
+
 .program-container {
     display: flex;
     justify-content: center;
@@ -58,7 +57,7 @@ h2 {
     gap: 20px;
 }
 
-/* Program Cards */
+
 .program-card {
     background: rgba(255, 255, 255, 0.9);
     color: black;
@@ -94,7 +93,7 @@ h2 {
     background: #d69400;
 }
 
-/* Apply Section */
+
 .apply {
     text-align: center;
     padding: 40px 20px;
@@ -118,7 +117,7 @@ h2 {
     background: #d69400;
 }
 
-/* Footer */
+
 footer {
     text-align: center;
     padding: 10px;

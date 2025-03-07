@@ -101,26 +101,22 @@ h2 {
     color: #333;
 }
 
-/* Footer styles */
 footer {
     background-color: rgba(0, 0, 0, 0.8);
     color: white;
     text-align: center;
     padding: 15px 0;
     width: 100%;
-    position: fixed;
+    position: relative; /* Changed from fixed to relative */
     bottom: 0;
+    margin-top: 20px; /* Added margin-top for space */
 }
 
-/* Responsiveness for smaller screens */
-@media screen and (max-width: 768px) {
-    .card-container {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .card {
-        width: 90%;
-        margin-bottom: 20px;
-    }
+.content {
+    padding-bottom: 100px; /* Adds extra padding to the bottom to avoid footer overlap */
+}
+
+.card {
+    width: 90%;
+    margin-bottom: 20px;
 }

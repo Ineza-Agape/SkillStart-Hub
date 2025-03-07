@@ -1,5 +1,5 @@
 body {
-    background-image: url('https://github.com/Ineza-Agape/SkillStart-Hub/blob/main/Images/learning.jpeg?raw=true');
+    background-image: url('./Images/learning.jpeg')
     background-size: cover;
     background-position: center;
     background-attachment: fixed;

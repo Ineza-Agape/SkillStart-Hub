@@ -5,6 +5,8 @@ body {
     margin: 0;
     padding: 0;
     height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 header {
@@ -45,6 +47,7 @@ header {
     background-color: #dfbcb0; /* Light brown background for the content */
     padding: 40px 20px;
     min-height: 100vh; /* Ensures there's enough space to scroll */
+    flex: 1;
 }
 
 .features, .about {
@@ -66,15 +69,32 @@ footer {
     color: white;
     text-align: center;
     padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
-/* Basic styling for the page */
+
 .content {
     padding: 20px;
     background-color: #f4f4f4;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 100px; /* Prevent overlap with footer */
 }
 
-h2 {
-    color: #492d23;
+.left {
+    width: 60%;
+}
+
+.right {
+    width: 35%;
+}
+
+.right img {
+    width: 100%;
+    border-radius: 10px;
 }
 
 .pdfs, .courses {
@@ -98,40 +118,20 @@ a {
 a:hover {
     text-decoration: underline;
 }
-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh; /* Full height */
-}
 
-.content {
-    flex: 1; /* Pushes footer down */
-}
+/* Responsive Design */
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+        align-items: center;
+    }
 
-footer {
-    background-color: #492d23;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-}
-.content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+    .left, .right {
+        width: 100%;
+        margin-bottom: 20px;
+    }
 
-.left {
-    width: 60%;
-}
-
-.right {
-    width: 35%;
-}
-
-.right img {
-    width: 100%;
-    border-radius: 10px;
+    .hero-text {
+        font-size: 28px; /* Adjust for smaller screens */
+    }
 }

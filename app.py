@@ -24,6 +24,18 @@ def login():
             return 'Oh Oh! Invalid credentials, try again please.'
     return render_template('index.html')
 
+@app.route('/signup', methods=['GET', 'POST'])
+def signup():
+    if request.method == 'POST':
+        email = request.form['email']
+        password = request.form['password']
+        if email in users:
+            return 'User already exists. Please log in.'
+        else:
+            users[email] = password
+            return redirect(url_for('login'))
+    return render_template('signup.html')
+
 @app.route('/dashboard')
 def dashboard():
     if 'user' not in session:

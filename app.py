@@ -11,6 +11,18 @@ users = {
 def home():
     return render_template('index.html')
 
+@app.route('/skill-building')
+def skill_building():
+    return render_template('skill-building.html')
+
+@app.route('/job-opportunities')
+def job_opportunities():
+    return render_template('Job-opportunities.html')
+
+@app.route('/mentorship-programs')
+def mentorship_programs():
+    return render_template('mentorship-programs.html')
+
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':

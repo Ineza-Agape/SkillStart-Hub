@@ -78,5 +78,10 @@ def dashboard():
     
     return render_template('dashboard.html', user_progress=user_progress, achievements=achievements)
 
+@app.route('/test')
+def test():
+    return render_template('index.html')
+
+
 if __name__ == '__main__':
     app.run(debug=True)

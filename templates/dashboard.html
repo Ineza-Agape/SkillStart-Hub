@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<h1>Welcome to your Dashboard, {{ session['user'] }}!</h1>
+
+<h2>Your Progress:</h2>
+<ul>
+    {% for skill, progress in user_progress.items() %}
+        <li>{{ skill }}: {{ progress }}%</li>
+    {% endfor %}
+</ul>
+
+<h2>Your Achievements:</h2>
+<ul>
+    {% for achievement in achievements %}
+        <li>{{ achievement }}</li>
+    {% endfor %}
+</ul>
+
+<h2>Update Your Progress:</h2>
+<form action="{{ url_for('update_progress') }}" method="POST">
+    <label for="skill">Select Skill:</label>
+    <select name="skill" id="skill">
+        <option value="skill-building">Skill Building</option>
+        <option value="job-opportunities">Job Opportunities</option>
+        <option value="mentorship-programs">Mentorship Programs</option>
+    </select>
+    
+    <label for="progress">Progress Percentage:</label>
+    <input type="number" name="progress" min="0" max="100" required>
+    
+    <button type="submit">Update Progress</button>
+</form>
+
+<a href="{{ url_for('home') }}">Go back to Home</a>
+
+</body>
+</html>

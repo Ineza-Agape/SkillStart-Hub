@@ -4,7 +4,14 @@ app = Flask(__name__)
 app.secret_key = 'your_secret_key'
 
 users = {
-    'user@example.com': 'password123'
+    'user@example.com': {
+        'password': 'password123',
+        'progress': {
+            'skill-building': 40,
+            'job-opportunities': 20,
+            'mentorship-programs': 70
+        }
+    }
 }
 
 @app.route('/')
@@ -52,7 +59,24 @@ def signup():
 def dashboard():
     if 'user' not in session:
         return redirect(url_for('login'))
-    return f'Welcome, {session["user"]}! You are now successfully logged in.'
+    
+    user_email = session['user']
+    user_progress = users[user_email]['progress']
+    
+    milestones = {
+        'skill-building': 'Complete basic courses',
+        'job-opportunities': 'Apply for first job',
+        'mentorship-programs': 'Finish mentorship phase'
+    }
+    
+    achievements = []
+    for skill, progress in user_progress.items():
+        if progress >= 100:
+            achievements.append(f"Completed {milestones[skill]}")
+        elif progress >= 75:
+            achievements.append(f"Almost there in {milestones[skill]}")
+    
+    return render_template('dashboard.html', user_progress=user_progress, achievements=achievements)
 
 if __name__ == '__main__':
     app.run(debug=True)

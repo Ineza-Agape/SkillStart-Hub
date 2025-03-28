@@ -36,12 +36,12 @@ def login():
         email = request.form['email']
         password = request.form['password']
 
-        if users.get(email) == password:
+        if users.get(email) and users[email]['password'] == password:
             session['user'] = email
             return redirect(url_for('dashboard'))
         else:
             return 'Oh Oh! Invalid credentials, try again please.'
-    return render_template('index.html')
+    return render_template('login.html')
 
 @app.route('/signup', methods=['GET', 'POST'])
 def signup():

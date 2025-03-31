@@ -1,7 +1,19 @@
 from flask import Flask, render_template, request, redirect, url_for, session
+from models import db, User, bcrypt
 
 app = Flask(__name__)
-app.secret_key = 'your_secret_key'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///users.db'
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+app.secret_key = ''
+
+db.init_app(app)
+
+
+with app.app_context():
+    db.create_all()
+
+app = Flask(__name__)
+app.secret_key = ''
 
 users = {
     'user@example.com': {

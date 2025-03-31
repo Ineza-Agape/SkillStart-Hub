@@ -4,7 +4,7 @@ from models import db, User, bcrypt
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///users.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-app.secret_key = 'b"c\xa6b\xa2W\xdd\x06e-\xd6\xd3\xa2\x84\xa4\x03\xcae\xf0<'\x1a\xe0\xbb\x97"'
+app.secret_key = '19e47e6e48a95ebaea122c32d373d043'
 
 db.init_app(app)
 
@@ -13,7 +13,7 @@ with app.app_context():
     db.create_all()
 
 app = Flask(__name__)
-app.secret_key = 'b"c\xa6b\xa2W\xdd\x06e-\xd6\xd3\xa2\x84\xa4\x03\xcae\xf0<'\x1a\xe0\xbb\x97"'
+app.secret_key = '19e47e6e48a95ebaea122c32d373d043'
 
 users = {
     'user@example.com': {

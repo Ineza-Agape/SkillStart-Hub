@@ -1,2 +1,4 @@
-import os
-print(os.urandom(24))
+import secrets
+
+secret_key = secrets.token_hex(16)
+print(f"Generated Secret Key: {secret_key}")

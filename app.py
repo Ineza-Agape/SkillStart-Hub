@@ -46,12 +46,19 @@ def login():
 @app.route('/signup', methods=['GET', 'POST'])
 def signup():
     if request.method == 'POST':
+        first_name = request.form['first_name']
+        last_name = request.form['last_name']
         email = request.form['email']
         password = request.form['password']
         if email in users:
             return 'User already exists. Please log in.'
         else:
-            users[email] = password
+            users[email] = {
+            'first_name': first_name,
+            'last_name': last_name,
+            'password': password,
+            'progress': {}
+            }
             return redirect(url_for('login'))
     return render_template('signup.html')
 

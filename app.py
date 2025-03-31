@@ -4,7 +4,7 @@ from models import db, User, bcrypt
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///users.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-app.secret_key = ''
+app.secret_key = 'b"c\xa6b\xa2W\xdd\x06e-\xd6\xd3\xa2\x84\xa4\x03\xcae\xf0<'\x1a\xe0\xbb\x97"'
 
 db.init_app(app)
 
@@ -13,7 +13,7 @@ with app.app_context():
     db.create_all()
 
 app = Flask(__name__)
-app.secret_key = ''
+app.secret_key = 'b"c\xa6b\xa2W\xdd\x06e-\xd6\xd3\xa2\x84\xa4\x03\xcae\xf0<'\x1a\xe0\xbb\x97"'
 
 users = {
     'user@example.com': {
@@ -48,11 +48,14 @@ def login():
         email = request.form['email']
         password = request.form['password']
 
-        if users.get(email) and users[email]['password'] == password:
-            session['user'] = email
+        user = User.query.filter_by(email=email).first()
+
+        if user and bcrypt.check_password_hash(user.password, password):
+            session['user'] = user.email
             return redirect(url_for('dashboard'))
         else:
-            return 'Oh Oh! Invalid credentials, try again please.'
+            return 'Invalid credentials, try again.'
+
     return render_template('login.html')
 
 @app.route('/signup', methods=['GET', 'POST'])
@@ -62,16 +65,19 @@ def signup():
         last_name = request.form['last_name']
         email = request.form['email']
         password = request.form['password']
-        if email in users:
+
+        existing_user = User.query.filter_by(email=email).first()
+        if existing_user:
             return 'User already exists. Please log in.'
-        else:
-            users[email] = {
-            'first_name': first_name,
-            'last_name': last_name,
-            'password': password,
-            'progress': {}
-            }
-            return redirect(url_for('login'))
+
+        hashed_password = bcrypt.generate_password_hash(password).decode('utf-8')
+
+        new_user = User(first_name=first_name, last_name=last_name, email=email, password=hashed_password)
+        db.session.add(new_user)
+        db.session.commit()
+
+        return redirect(url_for('login'))
+
     return render_template('signup.html')
 
 @app.route('/dashboard')

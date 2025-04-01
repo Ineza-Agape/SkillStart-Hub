@@ -3,5 +3,4 @@ description: "A simple Jekyll site"
 baseurl: "/SkillStart-Hub"
 url: "https://ineza-agape.github.io/SkillStart-Hub/"
 exclude:
-  - README.md
   - node_modules/

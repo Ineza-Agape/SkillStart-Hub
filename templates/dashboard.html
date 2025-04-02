@@ -6,26 +6,20 @@
     <title>Dashboard</title>
     <link rel="stylesheet" href="/static/style.css">
 </head>
-<body>
+<body onload="checkLogin()">
 
-<h1>Welcome to your Dashboard, {{ session['user'] }}!</h1>
+<h1>Welcome to your Dashboard, <span id="dashboard-user"></span>!</h1>
 
 <h2>Your Progress:</h2>
-<ul>
-    {% for skill, progress in user_progress.items() %}
-        <li>{{ skill }}: {{ progress }}%</li>
-    {% endfor %}
-</ul>
+<ul id="user-progress"></ul>
 
 <h2>Your Achievements:</h2>
-<ul>
-    {% for achievement in achievements %}
-        <li>{{ achievement }}</li>
-    {% endfor %}
+<ul id="user-achievements">
+    <li>No achievements yet.</li>
 </ul>
 
 <h2>Update Your Progress:</h2>
-<form action="{{ url_for('update_progress') }}" method="POST">
+<form onsubmit="event.preventDefault(); updateProgress();">
     <label for="skill">Select Skill:</label>
     <select name="skill" id="skill">
         <option value="skill-building">Skill Building</option>
@@ -34,12 +28,17 @@
     </select>
     
     <label for="progress">Progress Percentage:</label>
-    <input type="number" name="progress" min="0" max="100" required>
+    <input type="number" id="progress" min="0" max="100" required>
     
     <button type="submit">Update Progress</button>
+    <p id="progress-message"></p>
 </form>
 
-<a href="{{ url_for('home') }}">Go back to Home</a>
+<button onclick="logOut()">Logout</button>
+
+<a href="index.html">Go back to Home</a>
+
+<script src="/static/script.js"></script>
 
 </body>
 </html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillStart Hub</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    
+    <div class="hero-image">
+        <div class="hero-content">
+            <p class="hero-text">Your platform for skill-building and job creation!</p>
+        </div>
+    </div>
+
+    <div class="home-content">
+        <div class="card">
+            <h2>Welcome to SkillStart Hub</h2>
+            <p>We are dedicated to helping you build skills and create job opportunities. Explore our platform to get started with courses, training, and more!</p>
+            <div class="features">
+                <h3>Our Key Features:</h3>
+                <ul>
+                    <li><a href="{{ url_for('skill_building') }}">Skill-building courses</a></li>
+                    <li><a href="{{ url_for('job_opportunities') }}">Job opportunities</a></li>
+                    <li><a href="{{ url_for('mentorship_programs') }}">Mentorship programs</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="loginSection" class="login-section">
+        <div class="card">
+            <h2>Login</h2>
+            <form action="/login" method="POST">
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+            <p>Are you new here? <a href="signup.html">Sign up now</a>.</p>
+            <a href="#">Forgot Password?</a>
+        </div>
+    </div>
+
+    <script src="/static/script.js"></script>
+
+    <footer>
+        <p>&copy; 2025 SkillStart Hub. All rights reserved.</p>
+    </footer>
+</body>
+</html>

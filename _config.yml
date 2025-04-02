@@ -7,7 +7,7 @@ exclude:
   - servers/node_modules/
   - .git/
   - .github/
-  - *.md
+  - "*.md"
   - README.md
 
 theme: jekyll-theme-minimal

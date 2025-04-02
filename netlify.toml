@@ -6,4 +6,4 @@
   }
 
 [context.production.environment]
-  NODE_VERSION = "v22.14.0"
+  NODE_VERSION = "v22"

@@ -4,3 +4,5 @@ baseurl: "/SkillStart-Hub"
 url: "https://ineza-agape.github.io/SkillStart-Hub/"
 exclude:
   - node_modules/
+
+theme: jekyll-theme-minimal

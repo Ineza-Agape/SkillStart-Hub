@@ -1,9 +1,9 @@
 [build]
   command = "npm install && npm run build"
   publish = "dist"
-  environment = { 
-    NODE_ENV = "production" 
-  }
+
+[build.environment]
+  NODE_ENV = "production"
 
 [context.production.environment]
   NODE_VERSION = "v22"

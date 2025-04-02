@@ -15,20 +15,25 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.login = exports.signup = void 0;
 const database_1 = __importDefault(require("../database"));
 const bcrypt_1 = __importDefault(require("bcrypt"));
+const jsonwebtoken_1 = __importDefault(require("jsonwebtoken"));
+const dotenv_1 = __importDefault(require("dotenv"));
+dotenv_1.default.config();
+const SECRET_KEY = process.env.JWT_SECRET || 'yourSecretKey';
 const signup = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const { firstName, lastName, email, password } = req.body;
     try {
         const db = yield database_1.default;
         const existingUser = yield db.get('SELECT * FROM users WHERE email = ?', [email]);
         if (existingUser) {
-            return res.status(400).json({ message: 'User already exists. Please log in.' });
+            return res.status(400).json({ success: false, message: 'User already exists. Please log in.' });
         }
         const hashedPassword = yield bcrypt_1.default.hash(password, 10);
         yield db.run('INSERT INTO users (firstName, lastName, email, password) VALUES (?, ?, ?, ?)', [firstName, lastName, email, hashedPassword]);
-        res.status(201).json({ message: 'User created successfully!' });
+        res.status(201).json({ success: true, message: 'User created successfully!' });
     }
     catch (error) {
-        res.status(500).json({ error: 'Server error' });
+        console.error('Signup error:', error);
+        res.status(500).json({ success: false, message: 'Internal server error' });
     }
 });
 exports.signup = signup;
@@ -38,12 +43,14 @@ const login = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
         const db = yield database_1.default;
         const user = yield db.get('SELECT * FROM users WHERE email = ?', [email]);
         if (!user || !(yield bcrypt_1.default.compare(password, user.password))) {
-            return res.status(401).json({ message: 'Invalid credentials' });
+            return res.status(401).json({ success: false, message: 'Invalid credentials' });
         }
-        res.status(200).json({ message: 'Login successful!' });
+        const token = jsonwebtoken_1.default.sign({ userId: user.id, email: user.email }, SECRET_KEY, { expiresIn: '1h' });
+        res.status(200).json({ success: true, message: 'Login successful!', token });
     }
     catch (error) {
-        res.status(500).json({ error: 'Server error' });
+        console.error('Login error:', error);
+        res.status(500).json({ success: false, message: 'Internal server error' });
     }
 });
 exports.login = login;

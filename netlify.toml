@@ -1,5 +1,5 @@
-build:
-  command: npm ci && npx tsc
+[build]
+  command = "npm ci && npx tsc"
   publish = "dist"
 
 [context.production.environment]

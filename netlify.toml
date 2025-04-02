@@ -1,6 +1,6 @@
 [build]
   command = "npm install && npm run build"
-  publish = "servers/templates"
+  publish = "templates"
   functions = "servers/dist"
 
 [build.environment]

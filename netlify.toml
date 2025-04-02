@@ -1,7 +1,7 @@
 [build]
-  base = "servers"
   command = "npm install && npm run build"
-  publish = "../templates"
+  publish = "dist"
+  functions = "servers/dist"
 
 [build.environment]
-  NODE_VERSION = "18"
+  NODE_VERSION = "22"

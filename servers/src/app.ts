@@ -13,11 +13,11 @@ app.use(cors());
 
 app.use(express.static(path.join(__dirname, '../templates')));
 
-app.use('/api/auth', authRoutes);
-
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, '../templates', 'index.html'));
+  res.sendFile(path.resolve(__dirname, '../templates', 'index.html'));
 });
+
+app.use('/api/auth', authRoutes);
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {

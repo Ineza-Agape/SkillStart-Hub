@@ -1,26 +1,38 @@
 .dashboard-container {
-    padding: 20px;
-    background-color: #f9f9f9;
+    padding: 30px;
+    background: rgba(245, 245, 245, 0.8);
     color: #333;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
 }
 
 h1 {
+    font-size: 32px;
     color: #492d23;
+    margin-bottom: 20px;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 #dashboard-user {
     font-weight: bold;
     color: #492d23;
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    text-align: center;
 }
 
 #user-progress, #user-achievements {
     list-style-type: none;
     padding: 0;
+    margin-top: 20px;
 }
 
 #user-progress li, #user-achievements li {
     font-size: 1.2rem;
     margin: 10px 0;
+    text-align: center;
 }
 
 #user-progress li {
@@ -33,28 +45,38 @@ h1 {
 
 form {
     background-color: white;
-    padding: 20px;
+    padding: 25px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 form input, form select {
     width: 100%;
-    padding: 10px;
-    margin: 10px 0;
+    padding: 12px;
+    margin: 15px 0;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+form input:focus, form select:focus {
+    border-color: #492d23;
 }
 
 form button {
-    padding: 10px;
+    padding: 12px;
     background-color: #492d23;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 6px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    width: 100%;
 }
 
 form button:hover {
@@ -62,15 +84,21 @@ form button:hover {
 }
 
 button {
-    padding: 10px;
+    padding: 12px;
     background-color: #492d23;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 6px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    width: 100%;
 }
 
 button:hover {
     background-color: #735038;
+}
+
+a:hover, button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }

@@ -1,9 +1,7 @@
-[build]
-  command = "npm install && npm run build"
+  [build]
+  command = "npm install"  # Just install dependencies first
+  publish = "templates"
+  functions = "servers/dist"
 
-publish = "templates"
-functions = "servers/dist"
-
-[context.production.environment]
-  NODE_ENV = "production"
-  NODE_VERSION = "20"
+[[plugins]]
+  package = "@netlify/plugin-functions-install-core"

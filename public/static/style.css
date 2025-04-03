@@ -88,19 +88,19 @@ body {
     text-decoration: underline;
 }
 
-.login-section {
+.login-section, .signup-section {
     padding: 40px 20px;
     display: flex;
     justify-content: center;
 }
 
-.login-section .card {
+.login-section .card, .signup-section .card {
     width: 100%;
     max-width: 400px;
     margin-top: 20px;
 }
 
-.login-section input {
+.login-section input, .signup-section input {
     width: 100%;
     padding: 10px;
     margin: 10px 0;
@@ -108,7 +108,7 @@ body {
     border-radius: 5px;
 }
 
-.login-section button {
+.login-section button, .signup-section button {
     width: 100%;
     padding: 10px;
     background-color: #492d23;
@@ -119,7 +119,7 @@ body {
     transition: background-color 0.3s ease;
 }
 
-.login-section button:hover {
+.login-section button:hover, .signup-section button:hover {
     background-color: #735038;
 }
 
@@ -149,7 +149,7 @@ a:hover {
         font-size: 28px;
     }
 
-    .login-section .card {
+    .login-section .card, .signup-section .card {
         width: 90%;
     }
 

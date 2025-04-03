@@ -1,0 +1,76 @@
+.dashboard-container {
+    padding: 20px;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+h1 {
+    color: #492d23;
+}
+
+#dashboard-user {
+    font-weight: bold;
+    color: #492d23;
+}
+
+#user-progress, #user-achievements {
+    list-style-type: none;
+    padding: 0;
+}
+
+#user-progress li, #user-achievements li {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+#user-progress li {
+    color: #2d8b2c;
+}
+
+#user-achievements li {
+    color: #735038;
+}
+
+form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+form input, form select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    padding: 10px;
+    background-color: #492d23;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #735038;
+}
+
+button {
+    padding: 10px;
+    background-color: #492d23;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #735038;
+}

@@ -1,7 +1,6 @@
-  [build]
-  command = "npm install"  # Just install dependencies first
+[build]
+  command = ""
   publish = "templates"
-  functions = "servers/dist"
 
 [[plugins]]
   package = "@netlify/plugin-functions-install-core"

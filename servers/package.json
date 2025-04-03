@@ -1,0 +1,8 @@
+{
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.148"
+  },
+  "dependencies": {
+    "@netlify/functions": "^3.0.4"
+  }
+}

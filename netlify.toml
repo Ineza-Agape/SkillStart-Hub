@@ -1,6 +1,7 @@
 [build]
-  command = "npm ci && npx tsc"
-  publish = "dist"
+  command = "npm install && npx tsc"
+  publish = "templates"
+  functions = "servers/dist"
 
 [context.production.environment]
   NODE_ENV = "production"

@@ -1,7 +1,8 @@
 [build]
   command = "npm install && npm run build"
-  publish = "templates"
-  functions = "servers/dist"
+
+publish = "templates"
+functions = "servers/dist"
 
 [context.production.environment]
   NODE_ENV = "production"

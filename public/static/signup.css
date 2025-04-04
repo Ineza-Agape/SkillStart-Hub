@@ -19,8 +19,9 @@ body {
     padding: 40px 30px;
     border-radius: 12px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-    width: 100%;
-    max-width: 420px;
+    width: 90%;
+    max-width: 360px;
+    margin: 20px; 
 }
 
 .signup-container h2 {

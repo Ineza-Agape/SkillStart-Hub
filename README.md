@@ -34,9 +34,9 @@ node dist/server.js
 The backend will now be running at `http://localhost:5000`.
 
 ### 4. Open the Frontend
-You can easily open the frontend by opening the `templates/index.html` file directly in your browser, or use a simple HTTP server to serve it locally:
+You can easily open the frontend by opening the `public/` file directly in your browser, or use a simple HTTP server to serve it locally:
 ```sh
-npx http-server templates
+npx http-server public
 ```
 This will make the frontend accessible at `http://localhost:8080`.
 
